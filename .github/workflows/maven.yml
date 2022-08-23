@@ -23,6 +23,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-     env:
+      env:
           TB_SECRET_TOKEN: ${{ secrets.NZTB_SECRET_TOKEN }}
       run: mvn -bot.token=$TB_SECRET_TOKEN -B package --file pom.xml
